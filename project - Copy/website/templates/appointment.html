@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %}matching{% endblock %}
+{% block content %}
+<body style="background-color:#ff6d0bb8"></body>
+<link rel="stylesheet" href='/static/style.css' />
+<br />
+<h2 align="center">Zeit und Datum</h2>
+<br />
+<ul class="list-group list-group-flush" id="date">
+    {% for date in user.dates %}
+    <li class="list-group-item">
+        {{ date.data }}
+    </li>
+    {% endfor %}
+</ul>
+<form align="center" id="create-appointment-form" action="/appointments" method="POST">
+    <label for="date">Datum auswählen:</label>
+    <input type="date" id="date1" name="date" min="2023-08-10" max="2026-08-10" required>
+    <label for="time">Zeit auswählen:</label>
+    <select id="time" name="time">
+        <option value="" disabled selected>Zeit</option>
+        <option value="11:30">11:30 AM</option>
+        <option value="12:00">12:00 PM</option>
+        <option value="12:30">12:30 PM</option>
+    </select>
+    <button type="submit" class="btn btn-primary">Bestätigen</button>
+</form>
+<img 
+
+</ul>
+{% endblock %}

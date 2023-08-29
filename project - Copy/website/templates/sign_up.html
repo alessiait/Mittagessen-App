@@ -1,0 +1,37 @@
+{% extends "base.html" %} {% block title %}Registrieren{% endblock %}
+{% block content %}
+
+<form method="POST">
+    <body style="background-color:#ff6d0bb8"></body>
+    <link rel="stylesheet" href='/static/style.css' />
+    <h2 allign="center">Registrieren</h2>
+    <div class ="form-group">
+        <label for="email">Email Adresse</label>
+        <input type="email" class="form-control" id="email" name="email" placeholder="Email eingeben" autocomplete="off"/>
+    </div>
+    <div class ="form-group">
+        <label for="firstName">Vorname</label>
+        <input type="text" class="form-control" id="firstName" name="firstName" placeholder="Vorname eingeben" autocomplete="off"/>
+    </div>
+    <div class ="form-group">
+        <label for="email">Nachname</label>
+        <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Nachname eingeben" autocomplete="off"/>
+    </div>
+    <div class ="form-group">
+        <label for="password1">Password</label>
+        <input type="password" class="form-control" id="password1" name="password1" placeholder="Password eingeben"/>
+    </div>
+    <div class ="form-group">
+        <label for="password2">Password (Bestätigen)</label>
+        <input type="password" class="form-control" id="password2" name="password2" placeholder="Password wiederholen"/>
+        <br />
+        <select id="place" name="place">
+            <option value="" disabled selected>Ort</option>
+            <option value="Steyr">Steyr</option>
+            <option value="Wien">Wien</option>
+        </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <br />
+</form>
+{% endblock %}
